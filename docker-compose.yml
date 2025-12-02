@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+    python-app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: python_app
+        volumes:
+            - ./app:/app      # Mount your app folder for live updates
+        tty: true             # Keep container running for interactive use
